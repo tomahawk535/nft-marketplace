@@ -38,7 +38,7 @@ $mainColor: #000;
 @import "null";
 body {
 	color: $mainColor;
-	background: linear-gradient(90.71deg, #73E0A9 0%, #5B68DF 100%);
+	background: linear-gradient(90.71deg, #5B68DF 0%, #73E0A9 100%);
 	&._lock {
 		overflow: hidden;
 	}
@@ -52,6 +52,10 @@ body {
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
+	background-image: url("../img/wrap-bg.png");
+	background-position: top right;
+	background-repeat: no-repeat;
+	background-size: contain;
 	&._loaded {
 	}
 }
@@ -96,3 +100,96 @@ body {
 //===================================================================================================================================
 
 //</ОСНОВНОЙ БЛОК>====================================================================================================
+.hero {
+	background: rgba(31, 29, 43, 0.4);
+	.hero__container{
+		display: flex;
+		flex-direction: column;
+		padding: 220px 0 42px;
+		.hero__description {
+			font-style: normal;
+			font-weight: 700;
+			font-size: 14px;
+			line-height: 20px;
+			color: #FFFFFF;
+			opacity: 0.5;
+			margin-bottom: 20px;
+		}
+		.hero__title {
+			font-weight: 700;
+			font-size: 36px;
+			line-height: 52px;
+			color: #fff;
+			margin-bottom: 64px;
+		}
+		.hero__btns {
+			margin-bottom: 154px;
+			.btn__create,
+			.btn__explore {
+				color: #fff;
+				font-weight: 700;
+				font-size: 20px;
+				line-height: 29px;
+				padding: 13px 67px;
+				border-radius: 90px;
+				border: 1px solid #5B68DF;
+				margin-right: 40px;
+			}
+			.btn__create {
+				background: linear-gradient(90.71deg, #73E0A9 0%, #5B68DF 100%);
+				margin-right: 0;
+			}
+		}
+		.video_text {
+			font-weight: 700;
+			font-size: 14px;
+			line-height: 20px;
+			color: #fff;
+		}
+		.icon-play {
+			font-size: 16px;
+			&:before {
+				content: "\e904";
+				background-image: linear-gradient(90.71deg, #73E0A9 0%, #5B68DF 100%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				margin-right: 12px;
+
+
+			}
+		}
+	}
+}
+
+
+@media (max-width: 767px) {
+	.hero {
+		.hero__container {
+			padding: 50px 42px;
+		}
+	}
+}
+
+@media (max-width: 550px) {
+	.hero{
+		.hero__container {
+			.hero__title {
+				font-size: 28px;
+				line-height: 43px;
+				margin-bottom: 32px;
+			}
+			.hero__btns {
+				margin-bottom: 50px;
+				.btn__create,
+				.btn__explore {
+					padding: 13px 30px;
+					margin-right: 20px;
+				}
+				.btn__create {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+
+}

@@ -27,6 +27,102 @@
   font-weight: 300;
   font-style: normal;
 }
+@font-face {
+  font-family: "nft";
+  src: url("../fonts/icon/nft.eot?r26sp8");
+  src: url("../fonts/icon/nft.eot?r26sp8#iefix") format("embedded-opentype"), url("../fonts/icon/nft.ttf?r26sp8") format("truetype"), url("../fonts/icon/nft.woff?r26sp8") format("woff"), url("../fonts/icon/nft.svg?r26sp8#nft") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=icon-], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "nft" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-facebook:before {
+  content: "\e900";
+  background-image: linear-gradient(90.71deg, #73E0A9 0%, #5B68DF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.icon-instagram:before {
+  content: "\e901";
+  background-image: linear-gradient(90.71deg, #73E0A9 0%, #5B68DF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.icon-verified:before {
+  content: "\e902";
+  background-image: linear-gradient(90.71deg, #73E0A9 0%, #5B68DF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.icon-picture:before {
+  content: "\e903";
+  background-image: linear-gradient(90.71deg, #73E0A9 0%, #5B68DF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.icon-play:before {
+  content: "\e904";
+  background-image: linear-gradient(90.71deg, #73E0A9 0%, #5B68DF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.icon-shopping-bag:before {
+  content: "\e905";
+}
+
+.icon-telegram:before {
+  content: "\e906";
+  background-image: linear-gradient(90.71deg, #73E0A9 0%, #5B68DF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.icon-tiktok:before {
+  content: "\e907";
+  background-image: linear-gradient(90.71deg, #73E0A9 0%, #5B68DF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.icon-triangle:before {
+  content: "\e908";
+  background-image: linear-gradient(90.71deg, #73E0A9 0%, #5B68DF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.icon-wallet:before {
+  content: "\e909";
+  background-image: linear-gradient(90.71deg, #73E0A9 0%, #5B68DF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.icon-youtube:before {
+  content: "\e90a";
+  background-image: linear-gradient(90.71deg, #73E0A9 0%, #5B68DF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 * {
   padding: 0px;
   margin: 0px;
@@ -123,7 +219,7 @@ h6 {
 */
 body {
   color: #000;
-  background: linear-gradient(90.71deg, #73E0A9 0%, #5B68DF 100%);
+  background: linear-gradient(90.71deg, #5B68DF 0%, #73E0A9 100%);
 }
 body._lock {
   overflow: hidden;
@@ -135,6 +231,10 @@ body._lock {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  background-image: url("../img/wrap-bg.png");
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 ._container {
   max-width: 1201px;
@@ -781,6 +881,7 @@ body.ie ._ibg img {
 .header {
   width: 100%;
   background-color: rgba(31, 29, 43, 0.4);
+  backdrop-filter: blur(45px);
 }
 .header .header__container {
   display: flex;
@@ -856,6 +957,9 @@ body.ie ._ibg img {
 }
 
 @media (max-width: 767px) {
+  .header {
+    backdrop-filter: none;
+  }
   .header .header__container {
     padding: 27px 10%;
   }
@@ -908,7 +1012,7 @@ body.ie ._ibg img {
     left: 120%;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgb(0, 0, 0);
     padding: 150px 30px 30px 30px;
     transition: left 0.3s ease 0s;
     overflow: auto;
@@ -1010,4 +1114,87 @@ body.ie ._ibg img {
 */
 .page {
   flex: 1 1 auto;
+}
+
+.hero {
+  background: rgba(31, 29, 43, 0.4);
+}
+.hero .hero__container {
+  display: flex;
+  flex-direction: column;
+  padding: 220px 0 42px;
+}
+.hero .hero__container .hero__description {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #FFFFFF;
+  opacity: 0.5;
+  margin-bottom: 20px;
+}
+.hero .hero__container .hero__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 52px;
+  color: #fff;
+  margin-bottom: 64px;
+}
+.hero .hero__container .hero__btns {
+  margin-bottom: 154px;
+}
+.hero .hero__container .hero__btns .btn__create,
+.hero .hero__container .hero__btns .btn__explore {
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 29px;
+  padding: 13px 67px;
+  border-radius: 90px;
+  border: 1px solid #5B68DF;
+  margin-right: 40px;
+}
+.hero .hero__container .hero__btns .btn__create {
+  background: linear-gradient(90.71deg, #73E0A9 0%, #5B68DF 100%);
+  margin-right: 0;
+}
+.hero .hero__container .video_text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #fff;
+}
+.hero .hero__container .icon-play {
+  font-size: 16px;
+}
+.hero .hero__container .icon-play:before {
+  content: "\e904";
+  background-image: linear-gradient(90.71deg, #73E0A9 0%, #5B68DF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-right: 12px;
+}
+
+@media (max-width: 767px) {
+  .hero .hero__container {
+    padding: 50px 42px;
+  }
+}
+@media (max-width: 550px) {
+  .hero .hero__container .hero__title {
+    font-size: 28px;
+    line-height: 43px;
+    margin-bottom: 32px;
+  }
+  .hero .hero__container .hero__btns {
+    margin-bottom: 50px;
+  }
+  .hero .hero__container .hero__btns .btn__create,
+.hero .hero__container .hero__btns .btn__explore {
+    padding: 13px 30px;
+    margin-right: 20px;
+  }
+  .hero .hero__container .hero__btns .btn__create {
+    margin-right: 0;
+  }
 }
