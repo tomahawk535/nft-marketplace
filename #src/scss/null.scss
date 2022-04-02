@@ -46,6 +46,7 @@ button,
 textarea {
 	font-family: $fontFamily;
 	font-size: inherit;
+	appearance: none;
 }
 input::-ms-clear {
 	display: none;

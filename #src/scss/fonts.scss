@@ -1,4 +1,47 @@
-@include font("Gilroy-Bold", "Gilroy-Bold", "400", "normal");
-@include font("Gilroy-Medium", "Gilroy-Medium", "400", "normal");
-@include font("Gilroy-SemiBold", "Gilroy-SemiBold", "400", "normal");
-@include font("Gilroy-Regular", "Gilroy-Regular", "400", "normal");
+@font-face {
+  font-family: 'Whyte Inktrap';
+  src: url('../fonts/WhyteInktrap-Bold.eot');
+  src: local('../fonts/Whyte Inktrap Bold'), local('../fonts/WhyteInktrap-Bold'),
+  url('../fonts/WhyteInktrap-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/WhyteInktrap-Bold.woff2') format('woff2'),
+  url('../fonts/WhyteInktrap-Bold.woff') format('woff'),
+  url('../fonts/WhyteInktrap-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Whyte Inktrap';
+  src: url('../fonts/WhyteInktrap-Black.eot');
+  src: local('../fonts/Whyte Inktrap Black'), local('../fonts/WhyteInktrap-Black'),
+  url('../fonts/WhyteInktrap-Black.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/WhyteInktrap-Black.woff2') format('woff2'),
+  url('../fonts/WhyteInktrap-Black.woff') format('woff'),
+  url('../fonts/WhyteInktrap-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Whyte Inktrap';
+  src: url('../fonts/WhyteInktrap-Medium.eot');
+  src: local('../fonts/Whyte Inktrap Medium'), local('../fonts/WhyteInktrap-Medium'),
+  url('../fonts/WhyteInktrap-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/WhyteInktrap-Medium.woff2') format('woff2'),
+  url('../fonts/WhyteInktrap-Medium.woff') format('woff'),
+  url('../fonts/WhyteInktrap-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Whyte Inktrap';
+  src: url('../fonts/WhyteInktrap-Light.eot');
+  src: local('../fonts/Whyte Inktrap Light'), local('../fonts/WhyteInktrap-Light'),
+  url('../fonts/WhyteInktrap-Light.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/WhyteInktrap-Light.woff2') format('woff2'),
+  url('../fonts/WhyteInktrap-Light.woff') format('woff'),
+  url('../fonts/WhyteInktrap-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
