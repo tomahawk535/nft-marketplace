@@ -1,8 +1,9 @@
 //====================================================================================================
 .header {
   width: 100%;
-  background-color: rgba(31, 29, 43, 0.4);
-  backdrop-filter: blur(45px);
+  //background-color: rgba(31, 29, 43, 0.4);
+  backdrop-filter: blur(40px);
+  background: rgba(31, 29, 43, 0.5);
 
 
 
@@ -76,138 +77,150 @@
           }
         }
         .account__btn {
-           background-color: rgba(31, 29, 43, 0.5);
+          background-color: rgba(31, 29, 43, 0.5);
+
+
         }
         .wallet__btn {
           background: linear-gradient(90.71deg, #73E0A9 0%, #5B68DF 100%);
           margin-right: 0;
-        }
+          i {
+
+          }
+          i:before {
+            color: #fff!important;
+            margin-right: 10px;
+            background-image: none;
+            -webkit-background-clip: unset;
+            -webkit-text-fill-color: #fff;
       }
     }
   }
+}
+}
 }
 
 
 //========== mobile =================================================================================
 
 @media (max-width: 767px) {
-  .header {
-    backdrop-filter: none;
-    .header__container {
-      padding: 27px 10%;
-      .header__menu {
-        .menu__icon {
-          z-index: 5;
-          display: block;
-          position: relative;
-          width: 30px;
-          height: 18px;
-          cursor: pointer;
-        }
-        .menu__icon span,
-        .menu__icon::before,
-        .menu__icon::after {
-          left: 0;
-          position: absolute;
-          height: 10%;
-          width: 100%;
-          transition: all 0.3s ease 0s;
-          background-color: #fff;
-        }
-        .menu__icon::before,
-        .menu__icon::after {
-          content: "";
-        }
-        .menu__icon::before {
-          top: 0;
-        }
-        .menu__icon::after {
-          bottom: 0;
-        }
-        .menu__icon span {
-          top: 50%;
-          transform: scale(1) translate(0px, -50%);
-        }
+.header {
+backdrop-filter: none;
+.header__container {
+  padding: 27px 10%;
+  .header__menu {
+    .menu__icon {
+      z-index: 5;
+      display: block;
+      position: relative;
+      width: 30px;
+      height: 18px;
+      cursor: pointer;
+    }
+    .menu__icon span,
+    .menu__icon::before,
+    .menu__icon::after {
+      left: 0;
+      position: absolute;
+      height: 10%;
+      width: 100%;
+      transition: all 0.3s ease 0s;
+      background-color: #fff;
+    }
+    .menu__icon::before,
+    .menu__icon::after {
+      content: "";
+    }
+    .menu__icon::before {
+      top: 0;
+    }
+    .menu__icon::after {
+      bottom: 0;
+    }
+    .menu__icon span {
+      top: 50%;
+      transform: scale(1) translate(0px, -50%);
+    }
 
-        .menu__icon._active span {
-          transform: scale(0) translate(0px, -50%);
-        }
-        .menu__icon._active::before {
-          top: 50%;
-          transform: rotate(-45deg) translate(0px, -50%);
-        }
-        .menu__icon._active::after {
-          bottom: 50%;
-          transform: rotate(45deg) translate(0px, 50%);
-        }
-        .menu__body {
-          position: fixed;
-          top: 0;
-          left: +120%;
-          width: 100%;
-          height: 100%;
-          background-color: rgba(0, 0, 0, 1);
-          padding: 150px 30px 30px 30px;
-          transition: left 0.3s ease 0s;
-          overflow: auto;
-        }
-        .menu__body._active {
-          left: 0;
-          display: flex;
-          flex-direction: column;
-          justify-content: start;
-          align-items: center;
+    .menu__icon._active span {
+      transform: scale(0) translate(0px, -50%);
+    }
+    .menu__icon._active::before {
+      top: 50%;
+      transform: rotate(-45deg) translate(0px, -50%);
+    }
+    .menu__icon._active::after {
+      bottom: 50%;
+      transform: rotate(45deg) translate(0px, 50%);
+    }
+    .menu__body {
+      position: fixed;
+      top: 0;
+      left: -120%;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 1);
+      padding: 150px 30px 30px 30px;
+      transition: left 0.3s ease 0s;
+      overflow: auto;
+    }
+    .menu__body._active {
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
 
-          .wallet__btn, .account__btn {
-            margin: 30px 0 0;
-            width: 30%;
-            align-self: center;
-          }
+      .wallet__btn, .account__btn {
+        margin: 30px 0 0;
+        width: 30%;
+        align-self: center;
+      }
 
-          .menu__list {
-            flex-direction: column;
-            align-items: center;
-          }
-          .menu__list > li {
-            flex-wrap: wrap;
-            margin: 0px 0px 30px 0px;
-          }
-          .menu__list > li:last-child {
-            margin-bottom: 0;
-          }
-          .menu__list > li._active .menu__sub-list {
-            display: block;
-          }
-          .menu__link {
-            font-size: 24px;
-            text-transform: uppercase;
+      .menu__list {
+        flex-direction: column;
+        align-items: center;
+      }
+      .menu__list > li {
+        flex-wrap: wrap;
+        margin: 0px 0px 30px 0px;
+      }
+      .menu__list > li:last-child {
+        margin-bottom: 0;
+      }
+      .menu__list > li._active .menu__sub-list {
+        display: block;
+      }
+      .menu__link {
+        font-size: 24px;
+        text-transform: uppercase;
 
-            &:hover {
-              color: #fff;
-            }
-          }
-        }
-        .menu__body::before {
-          content: "";
-          position: fixed;
-          width: 100%;
-          top: 0;
-          left: 0;
-          height: 90px;
-          background-color: rgba(31, 29, 43, 0.2);
-          z-index: 2;
+        &:hover {
+          color: #fff;
         }
       }
     }
+    .menu__body::before {
+      content: "";
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      height: 90px;
+      background-color: rgba(31, 29, 43, 0.2);
+      z-index: 2;
+    }
   }
+}
+}
 }
 
 @media (max-width: 450px) {
-  .header .header__container .header__menu .menu__body._active .account__btn,
-  .header .header__container .header__menu .menu__body._active .wallet__btn {
-    width: 60%;
-  }
-  
+.header .header__container .header__menu .menu__body._active .account__btn,
+.header .header__container .header__menu .menu__body._active .wallet__btn {
+width: 60%;
+}
+
 }
 
 //====================================================================================================
@@ -215,45 +228,45 @@
 /*
 //Burger
 .icon-menu {
-	display: none;
-	@media (max-width: $md3+px) {
-		display: block;
-		position: absolute;
-		top: 18px;
-		right: 10px;
-		width: 30px;
-		height: 18px;
-		cursor: pointer;
-		z-index: 5;
-		span {
-			transition: all 0.3s ease 0s;
-			top: calc(50% - 1px);
-			left: 0px;
-			position: absolute;
-			width: 100%;
-			height: 2px;
-			background-color: #000;
-			&:first-child {
-				top: 0px;
-			}
-			&:last-child {
-				top: auto;
-				bottom: 0px;
-			}
-		}
-		&._active {
-			span {
-				transform: scale(0);
-				&:first-child {
-					transform: rotate(-45deg);
-					top: calc(50% - 1px);
-				}
-				&:last-child {
-					transform: rotate(45deg);
-					bottom: calc(50% - 1px);
-				}
-			}
-		}
-	}
+display: none;
+@media (max-width: $md3+px) {
+    display: block;
+    position: absolute;
+    top: 18px;
+    right: 10px;
+    width: 30px;
+    height: 18px;
+    cursor: pointer;
+    z-index: 5;
+    span {
+        transition: all 0.3s ease 0s;
+        top: calc(50% - 1px);
+        left: 0px;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #000;
+        &:first-child {
+            top: 0px;
+        }
+        &:last-child {
+            top: auto;
+            bottom: 0px;
+        }
+    }
+    &._active {
+        span {
+            transform: scale(0);
+            &:first-child {
+                transform: rotate(-45deg);
+                top: calc(50% - 1px);
+            }
+            &:last-child {
+                transform: rotate(45deg);
+                bottom: calc(50% - 1px);
+            }
+        }
+    }
+}
 }
 */
