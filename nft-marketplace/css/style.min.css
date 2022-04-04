@@ -1133,7 +1133,7 @@ display: none;
 .hero .hero__container {
   display: flex;
   flex-direction: column;
-  padding: 220px 0 42px;
+  padding: 220px 5% 42px;
 }
 .hero .hero__container .hero__description {
   font-style: normal;
@@ -1191,7 +1191,7 @@ display: none;
 .games .games__container {
   display: flex;
   flex-direction: column;
-  padding: 24px 0 128px;
+  padding: 24px 5% 128px;
 }
 .games .games__container .games__heading {
   display: flex;
@@ -1290,7 +1290,7 @@ display: none;
 }
 
 .instruction {
-  padding: 76px 0;
+  padding: 76px 5%;
   background: rgba(31, 29, 43, 0.4);
   background-color: rgba(0, 0, 0, 0.4);
 }
@@ -1339,15 +1339,80 @@ display: none;
   -webkit-text-fill-color: transparent;
 }
 
+.video {
+  padding: 116px 10% 128px;
+  background: rgba(31, 29, 43, 0.4);
+  text-align: center;
+}
+.video .video__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.video .video__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 52px;
+  color: #fff;
+  margin: 0 0 8px 0;
+  z-index: 1;
+}
+.video .video__description {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 29px;
+  background: linear-gradient(90.71deg, #73E0A9 0%, #5B68DF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 1;
+}
+.video .video__content {
+  margin: 54px auto;
+  position: relative;
+  width: 80%;
+}
+.video .video__content:before {
+  content: "";
+  display: block;
+  padding-top: 56.25%;
+}
+.video .video__content .nft__video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  box-shadow: 198px 127px 218px 80px rgba(115, 224, 169, 0.4), -198px -127px 218px 80px rgba(91, 104, 223, 0.4);
+}
+.video .video__btn {
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 29px;
+  padding: 13px 67px;
+  border-radius: 90px;
+  border: 1px solid #5B68DF;
+  background: linear-gradient(90.71deg, #73E0A9 0%, #5B68DF 100%);
+  cursor: pointer;
+  z-index: 1;
+}
+
 @media (max-width: 1001px) {
   .instruction .instruction__container .instruction__list {
-    flex-direction: column;
+    flex-wrap: wrap;
   }
   .instruction .instruction__container .instruction__list .instruction__item {
-    width: 100%;
+    width: 45%;
+    margin-top: 30px;
+  }
+  .instruction .instruction__container .instruction__list .instruction__item:first-child, .instruction .instruction__container .instruction__list .instruction__item:nth-child(2) {
+    margin-top: 0;
   }
   .instruction .instruction__container .instruction__list .instruction__item .item__title {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 20px;
   }
 }
@@ -1376,6 +1441,7 @@ display: none;
   .instruction .instruction__container .instruction__title {
     font-size: 28px;
     line-height: 30px;
+    align-self: center;
     text-align: center;
   }
   .instruction .instruction__container .instruction__list {
@@ -1392,6 +1458,22 @@ display: none;
   .instruction .instruction__container .instruction__list .instruction__item .item__title {
     font-size: 16px;
     line-height: 23px;
+  }
+
+  .video {
+    padding: 10%;
+  }
+  .video .video__title {
+    font-size: 28px;
+    line-height: 30px;
+  }
+  .video .video__content {
+    margin: 24px auto;
+  }
+  .video .video__btn {
+    padding: 13px 10%;
+    line-height: 100%;
+    font-size: 16px;
   }
 }
 @media (max-width: 550px) {
@@ -1414,5 +1496,9 @@ display: none;
 
   .games .games__container .games__heading .heading__title {
     font-size: 28px;
+  }
+
+  .video .video__content {
+    width: 100%;
   }
 }
