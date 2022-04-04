@@ -86,6 +86,9 @@
 
 .icon-shopping-bag:before {
   content: "\e905";
+  background-image: linear-gradient(90.71deg, #73E0A9 0%, #5B68DF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .icon-telegram:before {
@@ -233,6 +236,7 @@ body._lock {
   display: flex;
   flex-direction: column;
   background-image: url("../img/wrap-bg.png");
+  box-shadow: 170px 150px 298px 110px rgba(0, 0, 0, 0.25) inset, -69px -9px 113px 33px rgba(0, 0, 0, 0.35) inset;
   background-position: top right;
   background-repeat: no-repeat;
 }
@@ -1125,7 +1129,6 @@ display: none;
 
 .hero {
   background: rgba(31, 29, 43, 0.4);
-  box-shadow: 170px 150px 298px 110px rgba(0, 0, 0, 0.25) inset;
 }
 .hero .hero__container {
   display: flex;
@@ -1183,7 +1186,6 @@ display: none;
 }
 
 .games {
-  box-shadow: 170px 0px 298px 0 rgba(0, 0, 0, 0.25) inset;
   background: rgba(31, 29, 43, 0.4);
 }
 .games .games__container {
@@ -1218,11 +1220,11 @@ display: none;
   justify-content: space-between;
 }
 .games .games__container .games__body .games__item {
-  width: 30%;
+  width: 25%;
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 10px 17px;
+  padding: 12px 17px;
   border: 1px solid #5B68DF;
   border-radius: 35.0246px;
 }
@@ -1273,13 +1275,82 @@ display: none;
   margin-top: 12px;
   color: #fff;
 }
+.games .games__container .games__body .games__item:nth-child(2) {
+  box-shadow: -31px -69px 165px 136px rgba(91, 104, 223, 0.3);
+  background-color: rgba(91, 104, 223, 0.3);
+}
 .games .games__container .games__body .games__item:nth-child(2) .item__images .item__logo {
   background-image: url("../img/game-logo2.png");
+}
+.games .games__container .games__body .games__item:last-child {
+  box-shadow: 174px -15px 400px 60px rgba(0, 0, 0, 0.4), -174px 15px 300px 60px rgba(0, 0, 0, 0.35) inset;
 }
 .games .games__container .games__body .games__item:last-child .item__images .item__logo {
   background-image: url("../img/game-logo3.png");
 }
 
+.instruction {
+  padding: 76px 0;
+  background: rgba(31, 29, 43, 0.4);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.instruction .instruction__container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.instruction .instruction__container .instruction__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 52px;
+  color: #fff;
+}
+.instruction .instruction__container .instruction__list {
+  display: flex;
+  justify-content: space-between;
+  padding: 90px 0 75px;
+}
+.instruction .instruction__container .instruction__list .instruction__item {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.instruction .instruction__container .instruction__list .instruction__item .item__img {
+  font-size: 64px;
+}
+.instruction .instruction__container .instruction__list .instruction__item .item__title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 23px;
+  color: #fff;
+  margin: 12px 0;
+}
+.instruction .instruction__container .instruction__list .instruction__item .item__description {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: justify;
+  color: #fff;
+}
+.instruction .instruction__container .instruction__list .instruction__item .item__description a {
+  background-image: linear-gradient(90.71deg, #73E0A9 0%, #5B68DF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 1001px) {
+  .instruction .instruction__container .instruction__list {
+    flex-direction: column;
+  }
+  .instruction .instruction__container .instruction__list .instruction__item {
+    width: 100%;
+  }
+  .instruction .instruction__container .instruction__list .instruction__item .item__title {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
 @media (max-width: 767px) {
   .hero .hero__container {
     padding: 50px 42px;
@@ -1297,6 +1368,30 @@ display: none;
   }
   .games .games__container .games__body .games__item:first-child {
     margin-top: 0;
+  }
+
+  .instruction {
+    padding: 10%;
+  }
+  .instruction .instruction__container .instruction__title {
+    font-size: 28px;
+    line-height: 30px;
+    text-align: center;
+  }
+  .instruction .instruction__container .instruction__list {
+    flex-direction: column;
+    padding: 40px 0 35px;
+  }
+  .instruction .instruction__container .instruction__list .instruction__item {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .instruction .instruction__container .instruction__list .instruction__item:first-child {
+    margin-top: 0;
+  }
+  .instruction .instruction__container .instruction__list .instruction__item .item__title {
+    font-size: 16px;
+    line-height: 23px;
   }
 }
 @media (max-width: 550px) {
