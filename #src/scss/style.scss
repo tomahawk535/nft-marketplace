@@ -54,7 +54,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	background-image: url("../img/wrap-bg.png");
-	box-shadow: 170px 150px 298px 110px rgba(0,0,0,0.25) inset, -69px -9px 113px 33px rgba(0,0,0,0.35) inset;
+	box-shadow: 170px 150px 298px 110px rgba(0,0,0,0.25) inset, -170px -9px 298px 110px rgba(0,0,0,0.25) inset;
 	background-position: top right;
 	background-repeat: no-repeat;
 	&._loaded {
@@ -103,8 +103,6 @@ body {
 //</ОСНОВНОЙ БЛОК>====================================================================================================
 .hero {
 	background: rgba(31, 29, 43, 0.4);
-	//filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-	//box-shadow: 170px 150px 298px 110px rgba(0,0,0,0.25) inset;
 	.hero__container{
 		display: flex;
 		flex-direction: column;
@@ -292,7 +290,7 @@ body {
 				}
 			}
 			.games__item:last-child{
-				box-shadow: 174px -15px 400px 60px rgba(0,0,0,0.4), -174px 15px 300px 60px rgba(0,0,0,0.35) inset;
+				box-shadow: 174px -15px 400px 60px rgba(0,0,0,0.2), -174px 15px 300px 60px rgba(0,0,0,0.2) inset;
 
 				.item__images {
 					.item__logo {
@@ -305,7 +303,7 @@ body {
 }
 .instruction {
 	padding: 76px 5%;
-	background:  rgba(31, 29, 43, 0.4);
+	//background:  rgba(31, 29, 43, 0.4);
 	background-color: rgba(0,0,0,0.4);
 	//backdrop-filter: blur(400px);
 	.instruction__container {
@@ -360,7 +358,6 @@ body {
 					line-height: 20px;
 					text-align: justify;
 					color: #fff;
-
 					a {
 						background-image: linear-gradient(90.71deg, #73E0A9 0%, #5B68DF 100%);
 						-webkit-background-clip: text;
@@ -398,7 +395,6 @@ body {
 		-webkit-text-fill-color: transparent;
 		z-index: 1;
 	}
-
 	.video__content {
 		margin: 54px auto;
 		position: relative;
@@ -439,6 +435,18 @@ body {
 	}
 }
 
+@media  (max-width: 1213px) {
+	.games {
+		.games__container {
+			padding: 24px 0 128px;
+			.games__body {
+				.games__item {
+					width: 32%;
+				}
+			}
+		}
+	}
+}
 @media  (max-width: 1001px) {
 	.instruction {
 		.instruction__container {
@@ -447,7 +455,6 @@ body {
 				.instruction__item {
 					width: 45%;
 					margin-top: 30px;
-
 					&:first-child, &:nth-child(2) {
 						margin-top: 0;
 					}
@@ -460,7 +467,6 @@ body {
 		}
 	}
 }
-
 @media (max-width: 767px) {
 	.hero {
 		.hero__container {
@@ -470,13 +476,11 @@ body {
 	.games {
 		padding: 0 10%;
 		.games__container {
-
 			.games__body {
 				flex-direction: column;
 				.games__item {
 					width: 100%;
 					margin-top: 15px;
-
 					&:first-child {
 						margin-top: 0;
 					}
@@ -493,7 +497,6 @@ body {
 				align-self: center;
 				text-align: center;
 			}
-
 			.instruction__list {
 				flex-direction: column;
 				padding: 40px 0 35px;
