@@ -1300,6 +1300,11 @@ footer .footer__container .footer__menu .footer__menu_item.social__item ul .foot
   line-height: 20px;
   color: rgba(255, 255, 255, 0.5);
   margin-bottom: 20px;
+  transform: translate(-500%, 0);
+}
+.hero .hero__container .hero__description.active {
+  transform: translate(0, 0);
+  transition: all 0.8s ease 0.3s;
 }
 .hero .hero__container .hero__title {
   font-weight: 700;
@@ -1307,9 +1312,19 @@ footer .footer__container .footer__menu .footer__menu_item.social__item ul .foot
   line-height: 52px;
   color: #fff;
   margin-bottom: 64px;
+  transform: scale(0);
+  transition: all 0.6s ease;
+}
+.hero .hero__container .hero__title.active {
+  transform: scale(1);
 }
 .hero .hero__container .hero__btns {
   margin-bottom: 154px;
+  transform: translate(500%, 0);
+}
+.hero .hero__container .hero__btns.active {
+  transform: translate(0, 0);
+  transition: all 0.6s ease 0.5s;
 }
 .hero .hero__container .hero__btns .btn__create,
 .hero .hero__container .hero__btns .btn__explore {
@@ -1385,6 +1400,20 @@ footer .footer__container .footer__menu .footer__menu_item.social__item ul .foot
   padding: 12px 17px;
   border: 1px solid #5B68DF;
   border-radius: 35.0246px;
+  transform: translate(500%, 0px);
+  transition: 0.3s all;
+}
+.games .games__container .games__body .games__item.active {
+  transform: translate(0px, 0px);
+}
+.games .games__container .games__body .games__item.active:nth-child(1) {
+  transition: all 0.8s ease 0s;
+}
+.games .games__container .games__body .games__item.active:nth-child(2) {
+  transition: all 0.8s ease 0.2s;
+}
+.games .games__container .games__body .games__item.active:nth-child(3) {
+  transition: all 0.8s ease 0.4s;
 }
 .games .games__container .games__body .games__item .item__images {
   display: flex;
@@ -1473,6 +1502,20 @@ footer .footer__container .footer__menu .footer__menu_item.social__item ul .foot
   display: flex;
   align-items: center;
   flex-direction: column;
+  transform: scale(0);
+  transition: 0.3s all;
+}
+.instruction .instruction__container .instruction__list .instruction__item.active {
+  transform: scale(1);
+}
+.instruction .instruction__container .instruction__list .instruction__item.active:nth-child(1) {
+  transition: all 0.8s ease 0s;
+}
+.instruction .instruction__container .instruction__list .instruction__item.active:nth-child(2) {
+  transition: all 0.8s ease 0.2s;
+}
+.instruction .instruction__container .instruction__list .instruction__item.active:nth-child(3) {
+  transition: all 0.8s ease 0.4s;
 }
 .instruction .instruction__container .instruction__list .instruction__item .item__img {
   font-size: 64px;
@@ -1544,6 +1587,11 @@ footer .footer__container .footer__menu .footer__menu_item.social__item ul .foot
   bottom: 0;
   right: 0;
   box-shadow: 198px 127px 218px 80px rgba(115, 224, 169, 0.4), -198px -127px 218px 80px rgba(91, 104, 223, 0.4);
+  transform: translate(-500%, 0);
+  transition: all 0.8s ease;
+}
+.video .video__content .nft__video.active {
+  transform: translate(0, 0);
 }
 .video .video__btn {
   color: #fff;
