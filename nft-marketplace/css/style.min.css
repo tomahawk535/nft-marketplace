@@ -126,6 +126,13 @@
   -webkit-text-fill-color: transparent;
 }
 
+.icon-twitter:before {
+  content: "\e90b";
+  background-image: linear-gradient(90.71deg, #73E0A9 0%, #5B68DF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 * {
   padding: 0px;
   margin: 0px;
@@ -1123,6 +1130,157 @@ display: none;
 }
 }
 */
+footer {
+  background: rgba(31, 29, 43, 0.5);
+}
+footer .footer__container {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+footer .footer__container .footer__info {
+  padding: 31px 0 93px;
+  display: flex;
+  flex-direction: column;
+  max-width: 276px;
+  width: 100%;
+}
+footer .footer__container .footer__info .footer__logo {
+  width: 73px;
+  height: 100px;
+}
+footer .footer__container .footer__info .footer__logo img {
+  width: 100%;
+  height: auto;
+}
+footer .footer__container .footer__info .company__name {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 18px;
+}
+footer .footer__container .footer__info .company__description {
+  font-weight: 350;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: justify;
+  color: #fff;
+}
+footer .footer__container .footer__menu {
+  display: flex;
+  align-items: start;
+  justify-content: space-around;
+  flex: 1 1 auto;
+  align-self: center;
+  margin-left: 15%;
+}
+footer .footer__container .footer__menu .footer__menu_item li {
+  margin-top: 14px;
+  text-transform: capitalize;
+}
+footer .footer__container .footer__menu .footer__menu_item li .footer__menu_link {
+  color: #fff;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: justify;
+}
+footer .footer__container .footer__menu .footer__menu_item .footer__menu_name {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  background: linear-gradient(90.71deg, #73E0A9 0%, #5B68DF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+footer .footer__container .footer__menu .footer__menu_item.social__item {
+  width: 25%;
+}
+footer .footer__container .footer__menu .footer__menu_item.social__item ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 23px;
+  justify-content: space-between;
+  padding-top: 14px;
+}
+footer .footer__container .footer__menu .footer__menu_item.social__item ul li {
+  margin-top: 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #73E0A9;
+}
+footer .footer__container .footer__menu .footer__menu_item.social__item ul .footer__menu_link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .footer__container .footer__menu .footer__menu_item.social__item ul .footer__menu_link i:before {
+  font-size: 18px;
+  background-image: none;
+  -webkit-background-clip: content;
+  -webkit-text-fill-color: #fff;
+}
+
+@media (max-width: 1224px) {
+  footer .footer__container .footer__menu {
+    margin-left: 5%;
+  }
+
+  footer .footer__container .footer__menu .footer__menu_item.social__item ul {
+    gap: 10px;
+    justify-content: start;
+  }
+}
+@media (max-width: 767px) {
+  footer .footer__container {
+    padding: 0 5%;
+    align-content: center;
+  }
+  footer .footer__container .footer__menu {
+    flex-wrap: wrap;
+  }
+  footer .footer__container .footer__menu .footer__menu_item {
+    width: 30%;
+  }
+  footer .footer__container .footer__menu .footer__menu_item.social__item {
+    width: 100%;
+  }
+}
+@media (max-width: 667px) {
+  footer {
+    padding-bottom: 10%;
+  }
+  footer .footer__container {
+    flex-direction: column;
+  }
+  footer .footer__container .footer__info {
+    width: 100%;
+    padding-bottom: 40px;
+  }
+  footer .footer__container .footer__menu {
+    margin-left: 0;
+  }
+  footer .footer__container .footer__menu .footer__menu_item {
+    width: 48%;
+  }
+  footer .footer__container .footer__menu .footer__menu_item.company__item {
+    order: 1;
+  }
+  footer .footer__container .footer__menu .footer__menu_item.stats__item {
+    order: 3;
+    margin-top: 15px;
+  }
+  footer .footer__container .footer__menu .footer__menu_item.social__item {
+    width: 48%;
+    margin-top: 20px;
+    order: 4;
+  }
+  footer .footer__container .footer__menu .footer__menu_item.resources__item {
+    order: 2;
+  }
+}
 .page {
   flex: 1 1 auto;
 }
@@ -1454,6 +1612,9 @@ display: none;
   }
   .instruction .instruction__container .instruction__list .instruction__item:first-child {
     margin-top: 0;
+  }
+  .instruction .instruction__container .instruction__list .instruction__item:nth-child(2) {
+    margin-top: 20px;
   }
   .instruction .instruction__container .instruction__list .instruction__item .item__title {
     font-size: 16px;

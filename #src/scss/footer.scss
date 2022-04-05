@@ -1,5 +1,181 @@
 footer {
+  background: rgba(31, 29, 43, 0.5);
+  .footer__container {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    .footer__info {
+      padding: 31px 0 93px;
+      display: flex;
+      flex-direction: column;
+      max-width: 276px;
+      width: 100%;
+
+      .footer__logo{
+        width: 73px;
+        height: 100px;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      .company__name {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+        text-transform: uppercase;
+        color: #fff;
+        margin-bottom: 18px;
+      }
+      .company__description {
+        font-weight: 350;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: justify;
+        color: #fff;
+      }
+
+    }
+    .footer__menu {
+      display: flex;
+      align-items: start;
+      justify-content: space-around;
+      flex: 1 1 auto;
+      align-self: center;
+      margin-left: 15%;
+
+      .footer__menu_item {
+        //flex-grow: 1;
+
+        li {
+          margin-top: 14px;
+          text-transform: capitalize;
+
+          .footer__menu_link {
+            color: #fff;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 20px;
+            text-align: justify;
+          }
+        }
+        .footer__menu_name {
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 20px;
+          background: linear-gradient(90.71deg, #73E0A9 0%, #5B68DF 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        &.social__item {
+          //flex-grow: 1;
+          width: 25%;
+
+          ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 23px;
+            justify-content: space-between;
+            padding-top: 14px;
+            li {
+              margin-top: 0;
+              padding: 10px;
+              border-radius: 5px;
+              border: 1px solid #73E0A9;
+            }
+            .footer__menu_link {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+            .footer__menu_link i:before {
+
+              font-size: 18px;
+              background-image: none;
+              -webkit-background-clip: content;
+              -webkit-text-fill-color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 //====================================================================================================
 
+@media (max-width: 1224px) {
+  footer .footer__container .footer__menu {
+    margin-left: 5%;
+  }
+  footer .footer__container .footer__menu .footer__menu_item.social__item ul {
+    gap: 10px;
+    justify-content: start;
+  }
+
+}
+
+
+@media (max-width: 767px) {
+  footer {
+    .footer__container {
+      //flex-direction: column;
+      padding: 0 5%;
+      align-content: center;
+      .footer__info {
+        //max-width: 767px;
+        //width: 100%;
+      }
+      .footer__menu {
+        flex-wrap: wrap;
+        .footer__menu_item {
+          width: 30%;
+
+          &.social__item {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 667px) {
+  footer {
+    padding-bottom: 10%;
+    .footer__container {
+      flex-direction: column;
+
+      .footer__info {
+        width: 100%;
+        padding-bottom: 40px;
+      }
+      .footer__menu {
+        //flex-direction: column;
+        margin-left: 0;
+
+
+        .footer__menu_item {
+          width: 48%;
+          &.company__item {
+            order: 1;
+          }
+          &.stats__item {
+            order: 3;
+            margin-top: 15px;
+          }
+          &.social__item {
+            width: 48%;
+            margin-top: 20px;
+            order: 4;
+          }
+          &.resources__item {
+            order: 2;
+          }
+        }
+      }
+    }
+  }
+}
 //====================================================================================================

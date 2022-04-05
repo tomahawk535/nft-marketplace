@@ -140,3 +140,9 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.icon-twitter:before {
+  content: "\e90b";
+  background-image: linear-gradient(90.71deg, #73E0A9 0%, #5B68DF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
